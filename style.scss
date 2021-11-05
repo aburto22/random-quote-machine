@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-image: radial-gradient(farthest-corner at 20% 20%, hsl(140, 80%, 85%) 20%, hsl(200, 80%, 80%));
   margin: 0;
@@ -5,22 +9,29 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
 #container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80vw;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 100vh;
   margin: auto;
 }
 
 #quote-box {
   padding: 2rem 2rem 1rem 2rem;
   max-width: 90%;
-  width: 400px;
+  width: 30rem;
   background-color: rgba(255, 255, 255, 0.9);
   opacity: 0;
   transition: opacity 500ms;
+  margin: 1rem auto;
+  flex-shrink: 1;
   
   #quote-icon {
     text-align: center;
@@ -55,6 +66,7 @@ body {
     color: white;
     background-color: hsl(210, 100%, 60%);
     border: none;
+    padding: 0.5rem 1rem;
     
     &:hover {
       background-color: hsl(200, 100%, 60%);
@@ -68,7 +80,7 @@ body {
   #tweet-quote {
     font-size: 1.5rem;
     padding: 0.3rem 0.5rem;
-    border-radius: 5px;
+    border-radius: 0.25rem;
     color: white;
     background-color: hsl(210, 100%, 60%);
     
